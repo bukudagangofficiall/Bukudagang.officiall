@@ -1,0 +1,37 @@
+name: Build Tailwind CSS
+
+on:
+  push:
+    branches: [main]
+    # Jangan trigger ulang kalau yang berubah cuma hasil build-nya sendiri (dist/**),
+    # supaya tidak infinite loop (workflow commit -> trigger workflow lagi -> commit lagi...)
+    paths-ignore:
+      - 'dist/**'
+
+# Izin tulis ke repo, dibutuhkan supaya workflow ini bisa commit balik dist/tailwind.css
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build purged Tailwind CSS
+        run: npm run build:css
+
+      - name: Commit hasil build
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-build tailwind.css [skip ci]"
+          file_pattern: "dist/tailwind.css"
