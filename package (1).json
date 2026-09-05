@@ -1,0 +1,12 @@
+{
+  "name": "pos-kasir-oktshop17",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build config untuk compile Tailwind CSS ter-purge (menggantikan CDN https://cdn.tailwindcss.com yang berat)",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
