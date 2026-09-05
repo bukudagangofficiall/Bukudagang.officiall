@@ -1,7 +1,7 @@
 {
-  "name": "OKTSHOP17 - POS Kasir",
-  "short_name": "OKTSHOP17",
-  "description": "Aplikasi kasir digital OKTSHOP17 - Digital Point of Sales",
+  "name": "BUKU DAGANG - POS Kasir",
+  "short_name": "BUKU DAGANG",
+  "description": "Aplikasi kasir digital BUKU DAGANG - Digital Point of Sales",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
