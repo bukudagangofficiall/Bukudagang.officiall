@@ -1,10 +1,10 @@
-// Service Worker untuk POS Kasir OKTSHOP17
+p// Service Worker untuk POS Kasir OKTSHOP17
 //
 // PENTING: setiap kali kamu update index.html/script.js/style.css dan upload ke GitHub,
 // GANTI ANGKA VERSI DI BAWAH INI (misal 'v1' jadi 'v2'). Kalau tidak diganti, HP yang sudah
 // install app ini bisa tetap memuat kode LAMA dari cache selama beberapa saat, walau kamu
 // sudah replace file di GitHub.
-const CACHE_VERSION = 'v12';
+const CACHE_VERSION = 'v13';
 const CACHE_NAME = `bukudagang-pos-${CACHE_VERSION}`;
 
 // File "app shell" yang di-precache saat install, supaya aplikasi tetap bisa dibuka walau
