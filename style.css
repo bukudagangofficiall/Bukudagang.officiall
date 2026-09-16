@@ -1,0 +1,239 @@
+:root{
+  --bg:#F5F6F3;
+  --surface:#FFFFFF;
+  --text:#1C1C1A;
+  --text-secondary:#5F5E5A;
+  --text-muted:#8A8A82;
+  --border:#E4E2D8;
+  --blue:#185FA5;
+  --blue-strong:#0C447C;
+  --blue-bg:#E6F1FB;
+  --green:#3B6D11;
+  --green-strong:#27500A;
+  --green-bg:#EAF3DE;
+  --red:#A32D2D;
+  --red-bg:#FCEBEB;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.view{display:none;min-height:100vh;}
+.view.active{display:block;}
+.app-shell{max-width:420px;margin:0 auto;padding:16px;position:relative;}
+
+/* ---- Splash screen ---- */
+.splash-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);}
+.splash-logo{width:280px;max-width:78%;height:auto;}
+
+/* ---- Login ---- */
+.login-box{max-width:360px;margin:60px auto;padding:24px;}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+.brand h1{font-size:18px;font-weight:600;margin:0;}
+.brand-icon{width:32px;height:32px;border-radius:8px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;}
+.muted{color:var(--text-secondary);font-size:14px;margin:0 0 20px;}
+label{display:block;font-size:13px;color:var(--text-secondary);margin:12px 0 6px;}
+input,select,textarea{
+  width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;
+  font-size:14px;background:var(--surface);color:var(--text);
+}
+textarea{min-height:80px;resize:vertical;}
+.error-text{color:var(--red);font-size:13px;min-height:18px;margin:8px 0 0;}
+.success-text{color:var(--green);font-size:13px;min-height:18px;margin:8px 0 0;font-weight:600;}
+.header-divider{width:44px;height:3px;background:var(--blue);border-radius:2px;margin:10px 0 16px;}
+.btn{width:100%;padding:11px;border-radius:8px;border:none;font-size:14px;font-weight:600;margin-top:12px;cursor:pointer;}
+.btn-primary{background:var(--blue);color:#fff;}
+.btn-secondary{background:transparent;color:var(--blue);border:1px solid var(--border);}
+.switch-text{text-align:center;font-size:13px;color:var(--text-secondary);margin-top:16px;}
+.switch-text a{color:var(--blue);font-weight:600;text-decoration:none;}
+
+/* ---- Topbar ---- */
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.brand-mini{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;}
+.brand-icon-sm{width:24px;height:24px;border-radius:6px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;}
+.icon-btn{background:none;border:none;color:var(--text-secondary);cursor:pointer;padding:4px;}
+
+/* ---- Kartu tanda pengenal (ID card) ---- */
+.id-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.id-card-strip{background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;}
+.id-card-strip-org{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.2px;}
+.id-card-profile-btn{background:rgba(255,255,255,.2);border:none;color:#fff;border-radius:8px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+.id-card-body{background:var(--blue-bg);display:flex;align-items:center;gap:12px;padding:16px;}
+.id-card-footer{display:flex;gap:6px;padding:12px 16px 16px;border-top:1px dashed var(--border);margin:0 16px;padding-left:0;padding-right:0;}
+.avatar{width:52px;height:52px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;flex-shrink:0;}
+.profile-name{font-weight:600;font-size:16px;margin:0;color:var(--blue-strong);}
+.profile-block{font-size:13px;margin:2px 0 0;color:var(--blue-strong);opacity:.85;}
+.badge-row{display:flex;gap:6px;margin-top:12px;}
+.badge{font-size:12px;font-weight:600;padding:3px 10px;border-radius:6px;}
+.badge-green{background:var(--green);color:#fff;}
+
+/* ---- Menu grid ---- */
+.section-label{font-size:13px;color:var(--text-secondary);margin:0 0 8px 2px;}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.menu-tile{
+  display:flex;flex-direction:column;align-items:flex-start;gap:10px;
+  background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:14px;text-align:left;cursor:pointer;font-size:13px;font-weight:600;color:var(--text);
+}
+.menu-icon{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff;}
+.menu-icon-blue{background:var(--blue);}
+.menu-icon-green{background:var(--green);}
+
+/* ---- Page header ---- */
+.page-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:15px;font-weight:600;}
+.back-btn{background:none;border:none;color:var(--text-secondary);cursor:pointer;padding:4px;display:flex;}
+
+/* ---- Hero card ---- */
+.hero-card{border-radius:14px;padding:16px;margin-bottom:14px;}
+.hero-blue{background:var(--blue-bg);}
+.hero-green{background:var(--green-bg);}
+.hero-blue .hero-label,.hero-blue .hero-value,.hero-blue .hero-sublabel{color:var(--blue-strong);}
+.hero-green .hero-label,.hero-green .hero-value{color:var(--green-strong);}
+.hero-label{font-size:12px;margin:0;opacity:.85;}
+.hero-value{font-size:24px;font-weight:600;margin:4px 0 10px;}
+.hero-sublabel{font-size:12px;opacity:.85;}
+.hero-footer{display:flex;align-items:center;justify-content:space-between;margin-top:12px;}
+.btn-chip{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;}
+.detail-list{background:var(--surface);border-radius:10px;padding:4px 12px;margin:8px 0 0;}
+.detail-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.detail-row:last-child{border-bottom:none;}
+.two-col{display:flex;gap:10px;margin-top:12px;}
+.mini-stat{flex:1;background:var(--surface);border-radius:10px;padding:10px 12px;}
+.muted-sm{font-size:11px;color:var(--text-muted);margin:0;}
+.mini-value{font-size:14px;font-weight:600;margin:2px 0 0;}
+.mini-value-green{color:var(--green);}
+.mini-value-red{color:var(--red);}
+
+/* ---- List ---- */
+.list{display:flex;flex-direction:column;gap:8px;}
+.list-item{display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;}
+.list-item .title{font-size:14px;margin:0;}
+.list-item .subtitle{font-size:12px;color:var(--text-muted);margin:2px 0 0;}
+.pill{font-size:12px;font-weight:600;padding:3px 10px;border-radius:6px;}
+.pill-green{background:var(--green-bg);color:var(--green);}
+.pill-red{background:var(--red-bg);color:var(--red);}
+.amount-green{font-size:13px;font-weight:600;color:var(--green);}
+.amount-red{font-size:13px;font-weight:600;color:var(--red);}
+.icon-circle{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;}
+.icon-circle-green{background:var(--green);}
+.icon-circle-red{background:var(--red);}
+.icon-circle-blue{background:var(--blue);}
+.left-row{display:flex;align-items:center;gap:10px;}
+.empty-state{color:var(--text-muted);font-size:13px;padding:20px 0;text-align:center;}
+
+/* ---- Banner Informasi warga (carousel) ---- */
+.banner-wrap{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;background:var(--surface);}
+.banner-track{display:flex;transition:transform .5s ease;}
+.banner-slide{min-width:100%;}
+.banner-photo{width:100%;height:150px;object-fit:cover;display:block;background:var(--border);}
+.banner-caption{padding:10px 14px;font-size:13px;font-weight:600;}
+
+form{margin-bottom:20px;}
+
+.menu-tile-badge{position:relative;}
+.tile-badge{position:absolute;top:10px;right:10px;background:var(--red);color:#fff;font-size:11px;font-weight:600;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 5px;}
+.section-row{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px;}
+.section-row .section-label{margin:0;}
+.chip-btn{border:none;border-radius:8px;padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer;color:#fff;}
+.chip-btn-green{background:var(--green);}
+.chip-btn-red{background:var(--red);}
+.inline-form{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px;}
+.inline-form input{margin-bottom:8px;}
+
+/* ---- Form dua kolom (dipakai di pendaftaran & profil) ---- */
+.two-col-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.two-col-form label{margin:10px 0 6px;}
+
+/* ---- Header organisasi (Super admin) ---- */
+.org-header{text-align:center;padding:8px 0 16px;}
+.org-title{font-size:16px;font-weight:600;margin:0;}
+.org-address{font-size:12px;color:var(--text-secondary);margin:4px 0 0;}
+.sa-header-card{position:relative;background:var(--blue-bg);border-radius:14px;padding:16px 60px 16px 16px;margin-bottom:14px;}
+.sa-header-card .org-title{color:var(--blue-strong);text-align:left;}
+.sa-header-card .org-address{color:var(--blue-strong);opacity:.85;text-align:left;}
+.sa-header-logout{position:absolute;top:14px;right:14px;color:var(--blue-strong);}
+
+/* ---- Dropdown menu sidebar (Super admin) ---- */
+.dropdown-menu{position:absolute;top:52px;left:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.12);z-index:10;overflow:hidden;}
+.dropdown-item{display:flex;align-items:center;gap:8px;width:100%;background:none;border:none;padding:10px 14px;font-size:13px;text-align:left;cursor:pointer;color:var(--text);}
+.dropdown-item:hover{background:var(--bg);}
+
+/* ---- Kartu warga digital v2 (tanpa wallet, dengan QR) ---- */
+.idcard{position:relative;background:var(--blue);border-radius:16px;padding:16px;color:#fff;overflow:hidden;margin-bottom:16px;}
+.idcard-shape{position:absolute;border-radius:50%;background:rgba(255,255,255,.08);}
+.idcard-shape-1{width:140px;height:140px;top:-65px;right:-45px;}
+.idcard-shape-2{width:80px;height:80px;bottom:-35px;left:-25px;background:rgba(255,255,255,.06);}
+.idcard-header{display:flex;align-items:center;gap:8px;margin-bottom:16px;position:relative;}
+.idcard-chip{width:24px;height:19px;border-radius:5px;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-size:12px;}
+.idcard-brand{font-size:10.5px;font-weight:700;letter-spacing:1px;opacity:.9;}
+.idcard-mid{display:flex;align-items:flex-start;gap:10px;position:relative;}
+.idavatar-col{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0;}
+.idprofile-link{background:rgba(255,255,255,.18);border:none;color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;display:flex;align-items:center;gap:3px;cursor:pointer;white-space:nowrap;}
+.idname-block{flex:1;padding-top:2px;min-width:0;}
+.idname-block .profile-name{font-size:15px;font-weight:700;margin:0;color:#fff;}
+.idname-block .profile-block{font-size:11.5px;opacity:.85;margin:2px 0 0;color:#fff;}
+.badge-row-inline{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap;}
+.idqr-col{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;}
+.idqr{width:50px;height:50px;background:#fff;border-radius:8px;padding:4px;}
+.idqr-grid{width:100%;height:100%;display:grid;gap:1px;}
+.idqr-grid div{background:var(--blue-strong);}
+.idqr-grid div.off{background:transparent;}
+.idqr-label{font-size:8.5px;opacity:.85;color:#fff;}
+
+/* ---- Riwayat pembayaran (tabel + filter) ---- */
+.small-label{display:block;font-size:11.5px;color:var(--text-secondary);margin:0 0 4px;}
+.hint-text{font-size:11.5px;color:var(--text-muted);margin:8px 2px 10px;}
+.table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.riwayat-table{width:100%;border-collapse:collapse;font-size:12px;}
+.riwayat-table th{text-align:left;padding:8px;color:var(--text-secondary);font-weight:600;border-bottom:1px solid var(--border);}
+.riwayat-table td{padding:9px 8px;border-bottom:1px solid var(--border);}
+.riwayat-table tr:last-child td{border-bottom:none;}
+.pill-sm{font-size:10px;font-weight:600;padding:2px 7px;border-radius:6px;}
+.pill-sm-green{background:var(--green-bg);color:var(--green);}
+.pill-sm-red{background:var(--red-bg);color:var(--red);}
+.pill-sm-amber{background:#FAEEDA;color:#854F0B;}
+
+/* ---- Layar bayar tagihan ---- */
+.qr-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;margin-bottom:12px;}
+.qr-frame{width:120px;height:120px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px;margin:0 auto;}
+.qr-caption{font-size:11.5px;color:var(--text-muted);margin:10px 0 0;}
+.status-box{border-radius:12px;padding:16px;text-align:center;margin-bottom:14px;}
+.status-box-green{background:var(--green-bg);color:var(--green-strong);}
+.status-box-red{background:var(--red-bg);color:var(--red);}
+.status-box-amber{background:#FAEEDA;color:#854F0B;}
+.status-text{font-weight:600;margin:0;}
+.struk-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:4px 14px;}
+.struk-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.struk-row:last-child{border-bottom:none;}
+.btn-disabled{opacity:.5;pointer-events:none;}
+.btn-hubungi{display:flex;align-items:center;gap:6px;background:var(--green);color:#fff;border-radius:20px;padding:7px 14px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+.chip-btn-blue{background:var(--blue);}
+.banner-slide-empty{display:flex;align-items:center;justify-content:center;min-height:100px;}
+
+/* ---- Modal kustom (pengganti alert/confirm bawaan browser) ---- */
+.app-modal-overlay{position:fixed;inset:0;background:rgba(28,28,26,.5);display:flex;align-items:center;justify-content:center;z-index:200;padding:20px;}
+.app-modal-overlay[hidden]{display:none;}
+.app-modal-box{background:var(--surface);border-radius:16px;padding:22px 20px 18px;max-width:320px;width:100%;box-shadow:0 12px 32px rgba(0,0,0,.22);text-align:center;}
+.app-modal-icon{width:40px;height:40px;border-radius:50%;background:var(--blue-bg);color:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+.app-modal-icon.app-modal-icon-green{background:var(--green-bg);color:var(--green);}
+.app-modal-message{font-size:14px;color:var(--text);margin:0 0 18px;line-height:1.5;}
+.app-modal-actions{display:flex;gap:10px;justify-content:center;}
+.app-modal-btn{border:none;border-radius:8px;padding:9px 18px;font-size:13.5px;font-weight:600;cursor:pointer;flex:1;}
+.app-modal-btn-primary{background:var(--blue);color:#fff;}
+.app-modal-btn-secondary{background:transparent;color:var(--text-secondary);border:1px solid var(--border);}
+
+/* ---- Popup tagihan melayang (muncul saat login jika ada tagihan belum lunas) ---- */
+.ptl-overlay{position:fixed;inset:0;background:rgba(28,28,26,.5);display:flex;align-items:center;justify-content:center;z-index:180;padding:20px;}
+.ptl-overlay[hidden]{display:none;}
+.ptl-card{position:relative;background:var(--surface);border-radius:18px;padding:26px 20px 20px;width:100%;max-width:280px;text-align:center;box-shadow:0 16px 40px rgba(0,0,0,.25);}
+.ptl-corner{position:absolute;top:-10px;right:-10px;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;}
+.ptl-corner.ptl-close{background:var(--text-secondary);cursor:pointer;font-size:16px;}
+.ptl-label{font-size:12px;color:var(--text-secondary);margin:0;}
+.ptl-value{font-size:26px;font-weight:700;color:var(--blue);margin:4px 0 2px;}
+.ptl-sub{font-size:12px;color:var(--text-muted);margin:0 0 16px;}
+.ptl-btn{width:100%;background:var(--blue);color:#fff;border:none;border-radius:10px;padding:11px;font-size:14px;font-weight:600;cursor:pointer;}
+
+/* simple icon set using inline SVG via data attribute in JS */
